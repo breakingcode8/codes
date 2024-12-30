@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Styled Page Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #4CAF50;
+            font-family: Arial, sans-serif;
+            font-size: 28px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #2196F3;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p.highlight {
+            background-color: #ffeb3b;
+            font-weight: bold;
+            padding: 10px;
+            border: 1px dashed #ff9800;
+        }
+
+        div#container {
+            background-color: #e0f7fa;
+            padding: 20px;
+            border: 2px solid #00acc1;
+        }
+
+        a[target="_blank"] {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a[target="_blank"]:hover {
+            text-decoration: underline;
+        }
+
+        div p {
+            color: #616161;
+            font-size: 16px;
+        }
+
+        div>span {
+            color: #009688;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        h2+hr {
+            border: 0;
+            height: 1px;
+            background-color: #4CAF50;
+            margin: 10px 0;
+        }
+
+        h3~p {
+            font-family: 'Georgia', serif;
+            color: #555;
+        }
+
+        time,
+        img,
+        span {
+            display: block;
+            margin: 15px 0;
+        }
+
+        a:hover {
+            color: #9c27b0;
+            text-decoration: underline;
+        }
+
+        p::first-line {
+            font-weight: bold;
+            color: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Welcome to My Styled Page</h2>
+        <hr>
+
+        <h3>About This Page</h3>
+        <p>This is a sample paragraph that demonstrates how the first line is styled differently.</p>
+        <p class="highlight">This paragraph is highlighted with a background color and a dashed border.</p>
+
+        <p>This is another paragraph to show the effect of the general sibling selector. It gets a different font style.
+        </p>
+
+        <span>This span element is styled with the child selector.</span>
+
+        <p>The following image and time elements are grouped and have block display.</p>
+
+        <img src="sample.png" alt="Sample Image" width="200">
+        <time datetime="2024-12-12">December 12, 2024</time>
+
+        <p>Visit <a href="https://www.example.com" target="_blank">this link</a> to see how the attribute selector works
+            with hover effects.</p>
+    </div>
+
+</body>
+
+</html>

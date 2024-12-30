@@ -1,0 +1,76 @@
+<!-- Develop jQuery script (with HTML/CSS) for:
+a. Appends the content at the end of the existing paragraph and list.
+b. Change the state of the element with CSS style using animate() method
+c. Change the color of any div that is animated. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Script Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        p,
+        ul,
+        div {
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        p,
+        ul li {
+            color: #333;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Append Content</h2>
+    <p id="para">This is an existing paragraph.</p>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button id="appendBtn">Append Content</button>
+
+    <h2>Animate Element</h2>
+    <div class="box" id="animateBox"></div>
+    <button id="animateBtn">Animate Box</button>
+
+    <script>
+        $(document).ready(function () {
+            let itemCount = $('#list li').length; // Initialize with the current number of items in the list
+
+            // Append content to paragraph and list with a unique item number
+            $('#appendBtn').click(() => {
+                itemCount++; // Increment the item number
+                $('#para').append(` Appended text ${itemCount}.`);
+                $('#list').append(`<li>Item ${itemCount}</li>`);
+            });
+        });
+
+        // Animate element and change color
+        $('#animateBtn').click(() => {
+            $('#animateBox').css({ width: '100px', height: '100px', 'background-color': '#f4f4f4' }) // Reset properties
+                .animate({ width: '150px', height: '150px' }, 500, function () {
+                    $(this).css('background-color', 'lightblue');
+                });
+        });
+    </script>
+</body>
+
+</html>

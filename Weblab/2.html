@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Time Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #e8f5e9;
+        }
+
+        .lab {
+            background-color: #ffeb3b;
+        }
+
+        .elective {
+            background-color: #ffccbc;
+        }
+
+        tfoot {
+            background-color: #cfd8dc;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Class Time Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Day</th>
+                <th colspan="5">Subject/Time</th>
+            </tr>
+            <tr>
+                <th>9:00 - 10:00</th>
+                <th>10:00 - 11:00</th>
+                <th>11:00 - 12:00</th>
+                <th>1:00 - 2:00</th>
+                <th>2:00 - 3:00</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Mathematics</td>
+                <td>Physics</td>
+                <td class="lab" colspan="2">Physics Lab</td>
+                <td>English</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Chemistry</td>
+                <td>Mathematics</td>
+                <td>English</td>
+                <td class="elective">Elective - AI</td>
+                <td>Free Period</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td class="elective" colspan="2">Elective - Machine Learning</td>
+                <td>Chemistry</td>
+                <td>English</td>
+                <td class="lab">Chemistry Lab</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Mathematics</td>
+                <td>Physics</td>
+                <td>Computer Science</td>
+                <td>Chemistry</td>
+                <td class="elective">Elective - Data Science</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>English</td>
+                <td class="lab" colspan="2">Computer Science Lab</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">Note: Lab sessions and Electives are highlighted with different colors.</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
